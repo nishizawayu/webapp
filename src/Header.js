@@ -1,36 +1,32 @@
-
-
-function headers(){
+import logo from './img/icon23.png';
+import {
+    Link, Outlet,
+   } from "react-router-dom";
+import Footers from './Footer';
+function Headers(){
     return (
     <>
     
         <div>
-            <nav>
-            <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/weather">Weather</Link></li>
-            <li><Link to="/dashboard">Dashboard</Link></li>
-            </ul>
-        </nav>
+        
         <header className="App-header">
     
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>
-            Edit <code>src/App.js</code> and save to reload.
-            </p>
-            <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            >
-            Learn React
-            </a>
+            <h1><img src={logo} className="App-logo" alt="logo" /></h1>
+            <nav>
+        <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/weather">Weather</Link></li>
+            <li><Link to="/dashboard">dashboard</Link></li>
+        </ul>
+        </nav>
+        <hr />
         </header>
+
         <hr />
         <Outlet />
+        <Footers/>
     </div>
     </>
     )
     }
-    export default headers;
+    export default Headers;
