@@ -20,7 +20,7 @@ function Weather(){
   const [val,setval] = useState();
   const handleChange =(e)=>{
     setval(e.target.value);
-    alert(`${e.target.value}が選択されました`);
+    alert(`${e.target.value}が選択されました。`);
   }
 
   return( 
